@@ -1,9 +1,11 @@
 function smallEnough(a, limit) {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] > limit) {
-      return false;
+
+  for (let num of a) {
+    if (num > limit) {
+      return false
     }
   }
+
   return true;
 }
 
