@@ -6,7 +6,6 @@ function expandedForm(num) {
     tmp = (num - Math.floor(num / 10) * 10) * mul;
     mul *= 10;
     res.push(tmp);
-    console.log(tmp);
     num = Math.floor(num / 10);
   }
   return res.reverse().join(' + ');
