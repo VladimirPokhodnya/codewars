@@ -11,9 +11,11 @@ function expandedForm(num) {
     num = Math.floor(num / 10);
   }
   console.log(tmp);
-  res = res.reverse().join(' + ');
+  console.log(res);
+
+  res = res.filter((a) => a != 0).reverse().join(' + ');
   return res;
 }
 
 // console.log(expandedForm(70304));
-console.log(expandedForm(70304.23056));
+console.log(expandedForm(700.23056));
