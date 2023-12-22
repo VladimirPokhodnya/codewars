@@ -5,10 +5,15 @@ function expandedForm(num) {
   while (num >= 1) {
     tmp = (num - Math.floor(num / 10) * 10) * mul;
     mul *= 10;
-    res.push(tmp);
+    if (tmp != 0) {
+      res.push(Math.floor(tmp));
+    }
     num = Math.floor(num / 10);
   }
-  return res.reverse().join(' + ');
+  console.log(tmp);
+  res = res.reverse().join(' + ');
+  return res;
 }
 
-console.log(expandedForm(70304));
+// console.log(expandedForm(70304));
+console.log(expandedForm(70304.23056));
