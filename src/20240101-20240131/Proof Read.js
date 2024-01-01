@@ -1,6 +1,6 @@
 function proofread(str) {
   return str.split('. ')
-    .filter((a) => a != '')
+    // .filter((a) => a != '')
     .map((a) => a.toLowerCase().trim().replace(/ie/g, 'ei'))
     .map((a, i) => a = a.substring(0, 1).toUpperCase() + a.substring(1))
     .join('. ')
