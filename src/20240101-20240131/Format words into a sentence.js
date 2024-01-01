@@ -10,8 +10,8 @@ function formatWords(words) {
     .reverse()
     .join(', ')
     .replace(', ', ' and ')
-    .split(', ').map((a) => a.split(' and ')
-      .reverse().join(' and '))
+    .split(', ')
+    .map((a) => a.split(' and ').reverse().join(' and '))
     .reverse()
     .join(', ')
 }
