@@ -1,21 +1,16 @@
 var runLengthEncoding = function (str) {
-
-  res = str
-    .split('')
-    .map(a => a.split(""))
-    .flatMap(a => [[1, a[0]]])
-
-  let count = 0
-  for (let i = 1; i < res.length; i++) {
-    if (res[i][1] === res[i - 1][1]) {
-      res[i][0] += ++count
-      res[i - 1].push('del')
+  let res = []
+  let count = 1
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == str[i + 1]) {
+      count++
     } else {
-      count = 0
+      res.push([count, str[i]])
+      count = 1
     }
   }
 
-  return res.filter(a => a.length != 3);
+  return res
 }
 
 
